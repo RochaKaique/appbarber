@@ -1,12 +1,18 @@
 package bean;
-// Generated 05/05/2017 15:52:32 by Hibernate Tools 4.3.1
+// Generated 21/05/2017 11:23:01 by Hibernate Tools 4.3.1
 
 
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -14,64 +20,66 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name="servico"
-    ,catalog="victor_barber_db"
+    ,catalog="outro145_victor_barber_db"
 )
 public class Servico  implements java.io.Serializable {
 
 
+    @Id
+    @GeneratedValue(strategy=IDENTITY)
+    @Column(name="ID", unique=true, nullable=false)
      private Integer id;
+    @Column(name="NOME", length=150)
      private String nome;
+@Column(name="DURACAO_MINUTOS")
      private Integer duracaoMinutos;
+@Column(name="PRECO", precision=22, scale=0)
      private Double preco;
 
     public Servico() {
     }
 
-    public Servico(String nome, Integer duracaoMinutos, Double preco) {
-       this.nome = nome;
-       this.duracaoMinutos = duracaoMinutos;
-       this.preco = preco;
+    public Servico(Integer id, String nome, Integer duracaoMinutos, Double preco) {
+        this.id = id;
+        this.nome = nome;
+        this.duracaoMinutos = duracaoMinutos;
+        this.preco = preco;
     }
-   
-    @Id @GeneratedValue(strategy=IDENTITY)
-    @Column(name="ID", unique=true, nullable=false)
+
     public Integer getId() {
-        return this.id;
+        return id;
     }
-    
+
     public void setId(Integer id) {
         this.id = id;
     }
 
-    
-    @Column(name="NOME")
     public String getNome() {
-        return this.nome;
+        return nome;
     }
-    
+
     public void setNome(String nome) {
         this.nome = nome;
     }
 
-    
-    @Column(name="DURACAO_MINUTOS")
     public Integer getDuracaoMinutos() {
-        return this.duracaoMinutos;
+        return duracaoMinutos;
     }
-    
+
     public void setDuracaoMinutos(Integer duracaoMinutos) {
         this.duracaoMinutos = duracaoMinutos;
     }
 
-    
-    @Column(name="PRECO")
     public Double getPreco() {
-        return this.preco;
+        return preco;
     }
-    
+
     public void setPreco(Double preco) {
         this.preco = preco;
     }
+
+    
+    
 
 
 

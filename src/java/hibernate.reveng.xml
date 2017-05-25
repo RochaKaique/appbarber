@@ -40,7 +40,5 @@ made subject to such option by the copyright holder.
 Contributor(s):
 -->
 <hibernate-reverse-engineering>
-  <schema-selection match-catalog="VICTOR_BARBER_DB"/>
-  <table-filter match-name="servico"/>
-  <table-filter match-name="horario"/>
+  <schema-selection match-catalog="outro145_victor_barber_db"/>
 </hibernate-reverse-engineering>

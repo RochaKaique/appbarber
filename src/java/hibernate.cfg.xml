@@ -43,11 +43,11 @@ Contributor(s):
   <session-factory>
     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/VICTOR_BARBER_DB?zeroDateTimeBehavior=convertToNull</property>
-    <property name="hibernate.connection.username">kaique</property>
+    <property name="hibernate.connection.url">jdbc:mysql://108.167.188.210:3306/outro145_victor_barber_db?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.username">outro145_kaique</property>
     <property name="hibernate.connection.password">10122635Krm</property>
     <property name="hibernate.current_session_context_class">thread</property>
-    <mapping class="bean.Horario"/>
     <mapping class="bean.Servico"/>
+    <mapping class="bean.Horario"/>
   </session-factory>
 </hibernate-configuration>

@@ -5,7 +5,9 @@
  */
 package dao;
 
+import bean.Horario;
 import bean.Servico;
+import com.google.gson.Gson;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,9 +21,9 @@ public class teste {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        List<Servico> l = new ArrayList<>();
-        l = new ServicoDAO().list();
-        System.out.println(l);
+        List<Horario> l = new ArrayList<>();
+        l = new HorarioDAO().list();
+        System.out.println(new Gson().toJson(l));
     }
     
 }
